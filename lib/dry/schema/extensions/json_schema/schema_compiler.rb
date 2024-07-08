@@ -147,6 +147,10 @@ module Dry
           visit_predicate(rest, opts)
         end
 
+        def visit_namespace(node, opts = {})
+          visit(node[1], opts)
+        end
+
         # @api private
         def visit_predicate(node, opts = EMPTY_HASH)
           name, rest = node
